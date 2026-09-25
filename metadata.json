@@ -1,0 +1,8 @@
+{
+  "name": "Babaji Medical PPT Generator",
+  "description": "AI Agent that auto-generates professional, CBME-compliant Medical Lecture PPTs with biochemical diagrams, detailed case studies, and speaker notes for MBBS & MD curriculums.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

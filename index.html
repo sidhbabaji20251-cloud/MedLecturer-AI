@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Babaji Medical PPT Generator - Free CBME Slides Copilot</title>
+    <meta name="description" content="Babaji Medical PPT Generator: Free AI Agent that auto-generates professional, CBME-compliant Medical Lecture PPTs with biochemical diagrams, detailed case studies, and speaker notes for MBBS & MD curriculums." />
+    <meta property="og:title" content="Babaji Medical PPT Generator - Free CBME Slides Copilot" />
+    <meta property="og:description" content="Babaji Medical PPT Generator: Free AI Agent that auto-generates professional, CBME-compliant Medical Lecture PPTs with biochemical diagrams, detailed case studies, and speaker notes for MBBS & MD curriculums." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- PWA Meta tags -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#FDF9E2" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Babaji PPT" />
+    <link rel="apple-touch-icon" href="https://img.icons8.com/color/192/000000/doctor-clique.png" />
+    
+    <!-- Service Worker Registration & Cache Busting -->
+    <script>
+      // Force unregister stale service workers to load the updated layout engine instantly!
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+          for (const registration of registrations) {
+            registration.unregister().then(() => {
+              console.log('Stale Service Worker unregistered.');
+            });
+          }
+        });
+      }
+
+      // Purge old cache containers to resolve cached UNKNOWN-LAYOUT references
+      if ('caches' in window) {
+        caches.keys().then((names) => {
+          for (const name of names) {
+            caches.delete(name).then(() => {
+              console.log('Stale cache purged:', name);
+            });
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
